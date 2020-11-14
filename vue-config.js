@@ -1,0 +1,16 @@
+module.exports={
+  configureWebpack:{
+    resolve:{
+      alias:{
+        //'@':'src'是已经配置好的
+        'assets':'@/assets',
+        'common':'@/common',
+        'components':'@/components',
+        'network':'@/network',
+        /*'router':'@/router',
+        'store':'@/store',*/
+        'views':'@/views'
+      }
+    }
+  }
+}
