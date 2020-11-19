@@ -68,9 +68,10 @@
     justify-content: space-around;
     background: #f6f6f6;
     box-shadow: 0 -1px 1px rgba(100, 100, 100, .1);
+    z-index: 9;
   }
   .tab-bar-item>img {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 </style>

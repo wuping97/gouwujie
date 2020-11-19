@@ -4,6 +4,7 @@
     <slot v-else name="slot-active-img"></slot>
     <div :style="activeStyle">
       <slot name="slot-text"></slot>
+      <slot name="slot-div" v-if="isActived"></slot>
     </div>
   </div>
 </template>
@@ -13,7 +14,6 @@
     name: "tab-bar-item",
     data() {
       return {
-
       }
     },
     computed: {
@@ -34,6 +34,7 @@
     methods: {
       itemClick() {
         this.$router.push(this.path)
+        // console.log(this.isActive)
       }
     }
   }

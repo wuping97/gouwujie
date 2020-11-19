@@ -1,10 +1,16 @@
 <template>
-  <div>category</div>
+  <div>
+    <LeftBar></LeftBar>
+  </div>
 </template>
 
 <script>
+  import LeftBar from "../../components/common/LeftBar";
   export default {
-    name: "category"
+    name: "category",
+    components:{
+      LeftBar
+    }
   }
 </script>
 

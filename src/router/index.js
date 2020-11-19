@@ -1,17 +1,43 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 const Category=()=>import('@/views/category/Category')
 const Home=()=>import('@/views/home/Home')
 const Profile=()=>import('@/views/profile/Profile')
 const ShopCart=()=>import('@/views/shopCart/ShopCart')
+const Pop=()=>import('@/components/content/Pop')
+const News=()=>import('@/components/content/News')
+const Sell=()=>import('@/components/content/Sell')
 
 const routes = [
   {
     path:'',
-    redirect:'/home'
+    redirect:'home'
   },
   {
     path:'/home',
-    component:Home
+    component:Home,
+    meta:{title:'首页'},
+    children:[
+      //配置子路由
+      {
+        path:'',
+        redirect:'/home/pop'
+      },
+      {
+        path: 'pop',
+        name:'Pop',
+        component:Pop
+      },
+      {
+        path: 'news',
+        name: 'News',
+        component:News
+      },
+      {
+        path: 'sell',
+        name:'Sell',
+        component:Sell
+      }
+    ]
   },
   {
     path:'/category',
@@ -28,8 +54,9 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
+
 
 export default router
