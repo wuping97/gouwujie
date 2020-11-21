@@ -1,23 +1,27 @@
 <template>
   <div id="pop">
     <ul>
-      <li v-for="item in popArr">
-        <a :href="item.link">
+      <li v-for="item in popArr" @click="goDetail(item.iid)" :key="item.iid">
           <img :src="item.show.img" alt="">
           <p class="pop-text">{{item.title}}</p>
-        </a>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+  // import ProductDetail from "../common/ProductDetail";
   export default {
     name: "Pop",
     props: {
       popArr: {
         type: Array,
         default: []
+      }
+    },
+    methods:{
+      goDetail(id){
+        this.$router.push({name:'ProductDetail',params:{id}})
       }
     }
   }
@@ -37,7 +41,7 @@
     width: 45%;
     padding: 5px 0;
   }
-  #pop > ul>li>a>img{
+  #pop > ul>li>img{
     width: 100%;
     border-radius: 5px;
   }

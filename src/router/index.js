@@ -6,6 +6,7 @@ const ShopCart=()=>import('@/views/shopCart/ShopCart')
 const Pop=()=>import('@/components/content/Pop')
 const News=()=>import('@/components/content/News')
 const Sell=()=>import('@/components/content/Sell')
+const ProductDetail=()=>import('@/components/common/ProductDetail')
 
 const routes = [
   {
@@ -51,6 +52,11 @@ const routes = [
     path:'/shopcart',
     component:ShopCart
   },
+  {
+    path:'/home/productDetail/:id',
+    name:'ProductDetail',
+    component:ProductDetail
+  }
 ]
 
 const router = createRouter({

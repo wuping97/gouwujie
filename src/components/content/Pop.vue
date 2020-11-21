@@ -20,7 +20,7 @@
       getHomedata().then(res => {
         // console.log(res)
         this.popList=res.list
-        // console.log(this.popList)
+        console.log(this.popList)
       })
     }
   }

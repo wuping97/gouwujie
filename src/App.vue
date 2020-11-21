@@ -1,6 +1,6 @@
 <template>
   <div id="">
-    <Tabbar></Tabbar>
+<!--    <Tabbar></Tabbar>-->
     <router-view/>
   </div>
 

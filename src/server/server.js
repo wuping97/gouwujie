@@ -55,7 +55,10 @@ app.get('/category/categorydata',function (req,res) {
     res.send(JSON.parse(data))
   })
 })
-
+//商品详情
+/*app.get('/home/productDetail',function (req,res) {
+  const path=`./data/homedata/${req.query.id}`
+})*/
 app.listen(8000,function(){
   console.log('running')
 })

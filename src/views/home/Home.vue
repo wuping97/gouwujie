@@ -9,6 +9,7 @@
     <Recommend :reImgList="recommendList"></Recommend>
     <Recommend :reImgList="recommendList"></Recommend>
     <MiddleBar></MiddleBar>
+    <Tabbar></Tabbar>
     <router-view></router-view>
   </div>
 </template>
@@ -17,6 +18,7 @@
   import NavBar from 'components/common/navBar/NavBar'
   import {getHomeMultidata} from "network/home"
   // import {getHomedata} from "../../network/home"
+  import Tabbar from "../../components/common/tabbar/Tabbar";
   import Swipera from "components/common/SwiperA"
   import Recommend from "../../components/common/Recommend"
   import MiddleBar from "../../components/common/MiddleBar";
@@ -24,7 +26,7 @@
   export default {
     name: "home",
     components: {
-      NavBar, Swipera, Recommend, MiddleBar
+      NavBar, Swipera, Recommend, MiddleBar,Tabbar
     },
     data() {
       return {

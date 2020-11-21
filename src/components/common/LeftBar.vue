@@ -23,7 +23,7 @@
       return{
         categoryLeft:null,
         products:null,
-        nowProduct:[{img:"hhhhhhh1",title:'秋季新款1'}],
+        nowProduct:null,
         colorIndex:0
       }
     },
@@ -34,8 +34,9 @@
       getCategory().then(res=>{
         this.categoryLeft = res.category.list
         // this.products=res.category.list.subcategory
-        console.log(res)
-        console.log(this.categoryLeft)
+        this.nowProduct=this.categoryLeft[0].subcategory.data.list
+        /*console.log(res)
+        console.log(this.categoryLeft)*/
       })
     },
     methods:{
